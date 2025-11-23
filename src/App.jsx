@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
   const [glow, setGlow] = useState(false);
 
   const loggedUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  const navigate = useNavigate();
 
   // function for adding the list
   const handleSave = (e) => {
@@ -51,13 +52,23 @@ function App() {
   return (
     <>
       <div
-        className={` bg-gray-900 duration-300 p-10 mt-2 rounded-2xl ${
+        className={` bg-gray-900 relative duration-300 p-10 mt-2 rounded-2xl ${
           glow ? "shadow-[0_0_25px_5px_rgba(255,255,255,0.15)]" : ""
         }`}
       >
-        <h1 className=" text-white inline-block bg-transparent mb-7 font-semibold text-3xl">
+        <h1 className=" text-white bg-transparent mb-7 font-semibold text-3xl">
           Focus List
         </h1>
+        <button
+          onClick={() => {
+            localStorage.removeItem("loggedInUser");
+            navigate("/login");
+          }}
+          className="bg-amber-50 text-black hover:bg-sky-600 hover:text-white 
+                       duration-300 absolute top-4 right-4 text-sm rounded-lg mt-2 px-3 py-2 cursor-pointer"
+        >
+          Logout
+        </button>
         <p className="text-white text-lg mb-3">
           Welcome <span className="font-bold">{loggedUser?.username}</span>,
           prepare your focus list here
