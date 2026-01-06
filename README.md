@@ -1,12 +1,10 @@
-# React + Vite
+This is a modified focus list kind of "To-Do" apps:-
+1. Here you can list down your daily focused works and work on then one by one.
+2. Design is bit modified keeping in mind of gaining attention of user so that they can use smoothly.
+3. I have also built shiny login/signup pages:- 
+<img width="820" height="672" alt="Screenshot 2026-01-06 165300" src="https://github.com/user-attachments/assets/98031d74-4123-4f1c-a174-24ff9f2c66b4" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+4. Here is the final UI and I have also added a subtle hover animation once you hover at a perticular list, just to maintain interactivity.
+<img width="1754" height="674" alt="image" src="https://github.com/user-attachments/assets/451ff5f5-722c-432f-a119-26c4bf3ca216" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
